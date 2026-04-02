@@ -1,0 +1,23 @@
+{
+  "name": "cypress-foundation",
+  "version": "1.0.0",
+  "description": "My journey into QA Automation. Daily progress and exercises using Cypress, JavaScript, and Best Practices. Day 1: Environment Setup &amp; VSCode.",
+  "main": "first-test.js",
+  "scripts": {
+    "allure-clear": "rm -rf allure-results allure-report",
+    "cy-run": "npx cypress run --headed --env allure=true",
+    "allure-report": "npx allure generate allure-results -o allure-report --clean",
+     "allure-open": "npx allure open",
+     "test-allure": "npm run allure-clear && npm rum cy-run && npm run allure-report && npm run allure-open"
+       },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.10.0"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.36.0"
+  }
+}
